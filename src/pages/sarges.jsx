@@ -33,25 +33,24 @@ const SargesPage = () => {
           <section>
                   <img src={SargesLogo} width="150" alt="Sarges Logo"/>
                   <p className="pt-4 pb-3" style={briefCase}>
-                      The MpDS app ensures the automatic capture of imaging from which the characterisation and assessment process of wounds is made, 
-                      through an image pre-processing and segmentation algorithm, based on the visual characteristics of different wounds.
+                    Music artwork covers for a streaming plataform.
                   </p>
             </section>
           <section className="row">
             <div className="col-12 col-md-6 col-lg-3">  
-              <img src={PortoCha} className="img-fluid" alt="Mpds Wounds Logo"/>
+              <img src={PortoCha} className="img-fluid" alt="Porto Cha Illustration"/>
               <iframe width="100%" height="135" className="mt-2" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1274570797&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
               </div>
             <div className="col-12 col-md-6 col-lg-3">  
-              <img src={Wescz} className="img-fluid"  alt="Mpds Wounds Logo"/>
+              <img src={Wescz} className="img-fluid"  alt="Sarges Wescz"/>
               <iframe width="100%" height="135" className="mt-2" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1049697826&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
             </div>
             <div className="col-12 col-md-6 col-lg-3">  
-              <img src={ItBrokeMe} className="img-fluid" alt="Mpds Wounds Logo"/>
+              <img src={ItBrokeMe} className="img-fluid" alt="Sarges It Broke Me"/>
               <iframe width="100%" height="135" className="mt-2" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1075024516&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
             </div>
             <div className="col-12 col-md-6 col-lg-3">  
-              <img src={Soldi} className="img-fluid"  alt="Mpds Wounds Logo"/>
+              <img src={Soldi} className="img-fluid"  alt="Sarges Soldi"/>
               <iframe width="100%" height="135" className="mt-2" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1088778952&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
             </div>
           </section>

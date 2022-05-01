@@ -7,12 +7,6 @@ import MpdsWebPreview from '../images/MpdsWebPreview.svg';
 import SmMpdsWebPreview from '../images/sm_mpdsWebPreview.svg';
 import PrismaProduzEsocialPreview from '../images/PrismaProduzEsocialPreview.svg';
 import Sarges from '../images/sargesPreview.svg';
-import HTML5Logo from '../images/techsIcons/html5.svg';
-import CSS3Logo from '../images/techsIcons/css3.svg';
-import JSLogo from '../images/techsIcons/js.svg';
-import KotlinLogo from '../images/techsIcons/kotlin.svg';
-import GitLogo from '../images/techsIcons/git.svg';
-import SassLogo from '../images/techsIcons/sass.svg';
 import Layout from '../components/Layout'
 
 // styles
@@ -23,7 +17,8 @@ const pageStyles = {
 }
 const headingStyles = {
   fontFamily: "Work Sans, sans-serif",
-  fontWeight: 500
+  fontWeight: 500,
+  fontSize: 24
 }
 
 const linkStyle = {
@@ -43,9 +38,10 @@ const IndexPage = () => {
       <Layout>
         <div className="container mt-3 mt-md-4">
           <main style={pageStyles}>
-            <h2 style={headingStyles} className="px-2 pb-4 pt-2 py-md-4">Pedro Baltazar Relvas 
-            is a designer that codes and a developer that designs. Currently based in Braga and 
-            developing health apps at F3M. 🎉🎉🎉</h2>
+            <h2 style={headingStyles} className="px-2 pb-4 pt-2 py-md-4">Olá! My name is Pedro Baltazar Relvas! Whether serving as a UI designer or 
+            UI developer, my goal is to create an end product that brings efficiency and work meaning to the user. 
+            Mostly experienced in the healthcare niche, I enjoy collaborate with a cross-functional team who strives 
+            for a simple aesthetic solution, usability, and continuity. &#128241; &#x1F4BB; &#x2728; </h2>
             <div className="container">
               <div className="row">
               <div className="col-12 col-md-9">
@@ -63,14 +59,14 @@ const IndexPage = () => {
                     <div className="row">
                       <div className="col-6">
                         <div className="position-relative">
-                          <a href="./prismaEsocialProduz" class="stretched-link d-block py-2" style={linkStyle}>MpDS Web</a>
+                          <a href="./prismaEsocialProduz" class="stretched-link d-block py-2" style={linkStyle}>Prisma, Produz and Esocial</a>
                           <img src={PrismaProduzEsocialPreview} alt="Prisma Produz Esocial Preview"/>
                         </div>
                       </div>
                       <div className="col-6">
                         <div className="position-relative">
-                          <a href="./sarges" class="stretched-link d-block py-2" style={linkStyle}>MpDS Web</a>
-                          <img src={Sarges} alt="Prisma Produz Esocial Preview"/>
+                          <a href="./sarges" class="stretched-link d-block py-2" style={linkStyle}>Sarges</a>
+                          <img src={Sarges} alt="Sarges Preview"/>
                         </div>
                       </div>
                     </div>
@@ -87,35 +83,7 @@ const IndexPage = () => {
               </div>
             </div>
           </main>
-
         </div>
-          {/*  <div className="container-fluid g-0" style={sectionStyles}>
-              <div className="container">
-                <section className="px-4 pt-4 mt-5">
-                <h3>My homeboys:</h3>
-                  <div class="d-flex bd-highlight">
-                      <div class="flex-fill bd-highlight">
-                        <h5>Languages extensions</h5>
-                          <img src={HTML5Logo} width="25" alt="HTML5"/>
-                          <img src={CSS3Logo} width="25" alt="CSS3"/>
-                          <img src={JSLogo} width="25" alt="Javascript"/>
-                          <img src={KotlinLogo} width="25" alt="Kotlin"/>
-                          <img src={GitLogo} width="25" alt="Git"/>
-                          <img src={SassLogo} width="25" alt="Sass"/>
-                      </div>
-                      <div class="flex-fill bd-highlight">
-                        <h5>Languages extensions</h5>
-                        <img src={KotlinLogo} width="25" alt="Kotlin"/>
-                          <img src={GitLogo} width="25" alt="Git"/>
-                          <img src={SassLogo} width="25" alt="Sass"/>
-                      </div>
-                      <div class="flex-fill bd-highlight">
-                        <h5>Languages extensions</h5>
-                      </div>
-                  </div>
-                </section>
-              </div>
-          </div> */}
         </Layout>
       </div>
     </>

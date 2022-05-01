@@ -59,8 +59,9 @@ const PrismaProduzESocialPage = () => {
                 <img src={ProduzLogo} className="mx-md-5 pb-4 pb-md-0" width="250" alt="Produz Logo"/>
                 <img src={EsocialLogo} className="pt-md-4 pt-lg-0" width="250" alt="eSocial Logo"/>
                 <p className="pt-4" style={briefCase}>
-                    The MpDS app ensures the automatic capture of imaging from which the characterisation and assessment process of wounds is made, 
-                    through an image pre-processing and segmentation algorithm, based on the visual characteristics of different wounds.
+                   Prisma: Software for the optics sector management;<br/>
+                   Produz: Software management for the textile industry;<br/>
+                   eSocial: Software management of IPSS (Elderly Care, Child Care, etc);
                 </p>
             </section>
 
@@ -68,71 +69,69 @@ const PrismaProduzESocialPage = () => {
                 <div class="d-flex p-2 bd-highlight">
                     <div className="pr-5">
                         <p style={detailsCase}>Company</p>
-                        <img src={f3mLogo} width="100" alt="Mpds Wounds Logo"/>
+                        <img src={f3mLogo} width="100" alt="F3M Logo"/>
                     </div>
                     <div className="px-5">
                         <p style={detailsCase}>My Role</p>
-                        <p style={detail}>Android Development &#128241; Logo Design &#128311; Illustration &#127912; </p>
+                        <p style={detail}>Front-End Development &#x1F4BB; Logo Design &#128311; Illustration &#127912;</p>
                     </div>
                 </div>
             </section>
 
             <section className="pt-3 row">
-              <img src={PrismaLogin} className="d-md-none"  alt="Mpds World Illustration"/>
+              <img src={PrismaLogin} className="d-md-none"  alt="Prisma Login"/>
               <div className="col-4">
-                <img src={EsocialFirstIlus} className="d-none d-md-block" alt="Mpds World Illustration"/>
+                <img src={EsocialFirstIlus} className="d-none d-md-block" alt="eSocial Illustration"/>
               </div>
               <div className="col-4">
-                <img src={PrismaFirstIlus} className="d-none d-md-block" alt="Mpds World Illustration"/>
+                <img src={PrismaFirstIlus} className="d-none d-md-block" alt="Prisma Illustration"/>
               </div>
               <div className="col-4">
-                <img src={ProduzFirstIlus} className="d-none d-md-block" alt="Mpds World Illustration"/>
+                <img src={ProduzFirstIlus} className="d-none d-md-block" alt="Produz Illustration"/>
               </div>
                 
             </section>
 
             <section>
                 <p className="pt-4" style={briefCase}>
-                    The MpDS app ensures the automatic capture of imaging from which the characterisation and assessment process of wounds is made, 
-                    through an image pre-processing and segmentation algorithm, based on the visual characteristics of different wounds.
+                  Three large-scale products in one development base. 
+                  Three different areas sharing the same space.
+                  A huge exercise of flexibility between dev teams and business managers.
                 </p>
             </section>
 
             <section className="pt-3 row">
-              <img src={PrismaLogin} className="d-none d-md-block" alt="Mpds World Illustration"/>
+              <img src={PrismaLogin} className="d-none d-md-block" alt="Prisma Login"/>
             </section>
 
             <section className="pt-md-3 row">
-              <img src={AllThree} alt="All Three"/>
+              <img src={AllThree} alt="All Three UI Screens"/>
             </section>
 
             <section className="row pt-3">
               <p className="col-12 col-md-6" style={briefCase}>
-                The MpDS app ensures the automatic capture of imaging from which the characterisation and assessment process of wounds is made, 
-                through an image pre-processing and segmentation algorithm, based on the visual characteristics of different wounds.
+                In this products I: 
+                <ul>
+                <li>designed and built components (UI oriented); </li>  
+                <li>collaborated with the Marketing Team to define and design the identity of the products;</li>
+                <li>participated in usability tests;</li>
+                <li>prototyped several features;</li>
+                <li>visual tested on multiple browsers and devices;</li>
+                <li>co-developed component libraries and design systems;</li>
+                <li>designed logos and icons.</li>
+                </ul>
               </p>
               <div className="col-12 col-md-6" >
-                <img src={PrismaSecondIlus} alt="Mpds World Illustration"/>
+                <img src={PrismaSecondIlus} alt="Prisma Second Illustration"/>
               </div>
             </section>
 
             <section className="row pt-3">
               <div className="col-12 col-md-6 order-md-0 order-1">
-                <img src={ProduzSecondIlus} alt="Mpds World Illustration"/>
+                <img src={ProduzSecondIlus} alt="Produz Second Illustration"/>
               </div>
-              <p className="col-12 col-md-6" style={briefCase}>
-                  The MpDS app ensures the automatic capture of imaging from which the characterisation and assessment process of wounds is made, 
-                  through an image pre-processing and segmentation algorithm, based on the visual characteristics of different wounds.
-              </p>
-            </section>
-
-            <section className="row pt-3">
-              <p className="col-12 col-md-6" style={briefCase}>
-                The MpDS app ensures the automatic capture of imaging from which the characterisation and assessment process of wounds is made, 
-                through an image pre-processing and segmentation algorithm, based on the visual characteristics of different wounds.
-              </p>
               <div className="col-12 col-md-6" >
-                <img src={EsocialSecondIlus} alt="Mpds World Illustration"/>
+                <img src={EsocialSecondIlus} alt="eSocial Second Illustration"/>
               </div>
             </section>
 

@@ -2,8 +2,6 @@ import * as React from "react"
 import "@fontsource/work-sans";
 import "@fontsource/noto-sans";
 import "../../css/main.min.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import mpdsAndroidFinalSection from '../images/mpdsAndroidProject/mpdsAndroidFinal.svg';
 import spaceBackground from '../images/mpdsWeb/spaceBackground.png';
 import login from '../images/mpdsWeb/login.png';
@@ -103,8 +101,7 @@ const MpdsWebPage = () => {
               <section>
                   <img src={mpdsLogo} width="250" alt="Mpds Wounds Logo"/>
                   <p className="pt-4" style={briefCase}>
-                      The MpDS app ensures the automatic capture of imaging from which the characterisation and assessment process of wounds is made, 
-                      through an image pre-processing and segmentation algorithm, based on the visual characteristics of different wounds.
+                    MPDS Web allows user to easily manage and access the status of all the processes of each patient. Connected to Mpds Wounds.
                   </p>
               </section>
 
@@ -116,55 +113,69 @@ const MpdsWebPage = () => {
                       </div>
                       <div className="px-5">
                           <p style={detailsCase}>My Role</p>
-                          <p style={detail}>Android Development &#128241; Logo Design &#128311; Illustration &#127912; </p>
+                          <p style={detail}>React Development &#x1F4BB; Logo Design &#128311; Illustration &#127912; </p>
                       </div>
                   </div>
               </section>
 
             <section className="pt-3">
-                <img src={mpdsAndroidFinalSection} alt="Mpds World Goodbye"/>
+                <img src={mpdsAndroidFinalSection} alt="Mpds To the Moon Illustration"/>
+            </section>
+
+            <section className="position-relative pt-3 row">
+              <p className="position-absolute font-scale px-5" style={{color: "#fff", marginLeft: 'auto',
+marginRight: 'auto',
+left: 0,
+right: 0,
+top: '50%',
+  transform: 'translateY(-50%)',
+textAlign: 'center'}}>
+                  As a sequel for the mobile app, Mpds Web was born to be a 
+                  "plus extension" of patient's management. Created for the web, React.JS was my main tool to 
+                  replicate what the prototype brought. The journey 
+                  beginned in 2018.
+                </p>
+                <img src={spaceBackground} alt="Space Background"/>
+                
             </section>
 
             <section className="pt-3 row">
-                <img src={spaceBackground} alt="Mpds"/>
+                <img src={login} alt="Login UI"/>
             </section>
 
             <section className="pt-3 row">
-                <img src={login} alt="Mpds"/>
-            </section>
-
-            <section className="pt-3 row">
-                <img src={fourScreens} alt="Mpds"/>
+                <img src={fourScreens} alt="UI MPDS Web"/>
             </section>
 
             <section className="row pt-3">
-                <p className="col-6" style={briefCase}>
-                  The MpDS app ensures the automatic capture of imaging from which the characterisation and assessment process of wounds is made, 
-                  through an image pre-processing and segmentation algorithm, based on the visual characteristics of different wounds.
+                <p className="col-md-7 col-12" style={briefCase}>
+                  UI oriented, I took advantage of the top libraries in the "Web Dev Scene" to build all 
+                  the prototype components and to make sure the responsive aspect of 
+                  the app perform in all the major devices. Thinking of cross-browser 
+                  support and scability, the UI tests were also a weighty objective.
                 </p>
-                <div className="col-6" >
-                  <img src={api} alt="Mpds"/>
+                <div className="col-md-5 col-12" >
+                  <img src={api} alt="API Illustration"/>
                 </div>
               </section>
 
             <section className="row pt-3">
-                <div className="col-6" >
-                  <img src={security} alt="Mpds"/>
+                <div className="col-5" >
+                  <img src={security} alt="Security Illustration"/>
                 </div>
-              <p className="col-6" style={briefCase}>
-                  The MpDS app ensures the automatic capture of imaging from which the characterisation and assessment process of wounds is made, 
-                  through an image pre-processing and segmentation algorithm, based on the visual characteristics of different wounds.
-                
+              <p className="col-7" style={briefCase}>
+                It was a great experience for the "Dev" Team to bring to life a brotherhood of apps, both developed in such different tech environments.
+                Later, I was back to collaborate with the Marketing team to define and design the identity of the product: now limited to logo, illustrations and landing page. 
               </p>
             </section>
 
             <section className="pt-3 row">
-                <img src={site} alt="Mpds"/>
+                <img src={site} alt="Site UI"/>
             </section>
 
             <section className="row pt-3">
                 <div className="position-relative">
-                  <img src={downloadTheApp} alt="Mpds World Goodbye"/>
+                  <img src={downloadTheApp} alt="Download App Illustration"/>
                   <div  className="position-absolute" style={{right: 150, top: 120, }}>
                     <a href="https://mpds.f3m.pt/en/mpds-web-en/">
                     <MajorButton></MajorButton>
