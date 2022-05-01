@@ -1,13 +1,7 @@
 import * as React from "react"
-import "@popperjs/core/dist/umd/popper.min"
-//import "bootstrap/dist/css/bootstrap.min.css"
-//import "/css/main.min.css"
-import "bootstrap/dist/js/bootstrap.min"
 import "@fontsource/work-sans";
 import "@fontsource/noto-sans";
 import "../../css/main.min.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import EsocialFirstIlus from '../images/prismaEsocialProduz/esocialIlust1.svg';
 import EsocialSecondIlus from '../images/prismaEsocialProduz/esocialIlust2.svg';
 import PrismaFirstIlus from '../images/prismaEsocialProduz/prismaIlust1.svg';
@@ -30,10 +24,6 @@ const pageStyles = {
   color: "#232129",
   fontFamily: "Noto Sans, sans-serif"
   //fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  fontFamily: "Work Sans, sans-serif",
-  fontWeight: 700
 }
 
 const briefCase = {
