@@ -112,48 +112,48 @@ const IndexPage = () => {
 
         <h5 style={subHeadingStyles} className="px-2 text-center">Designing and coding with:</h5>
         
-          <div class="d-flex justify-content-center">
+          <div class="d-flex justify-content-center flex-wrap">
             <Tooltip title="Kotlin" arrow  placement="top">
-              <div className="my-auto"><img width="50" src={Kotlin} className="px-2"/></div> 
+              <div className="my-auto pb-2"><img width="50" src={Kotlin} className="px-2"/></div> 
             </Tooltip>
             <Tooltip title="HTML 5" arrow  placement="top">
-              <div className="my-auto"><img width="50" src={HTML} className="px-2"/> </div> 
+              <div className="my-auto pb-2"><img width="50" src={HTML} className="px-2"/> </div> 
             </Tooltip>
             
             <Tooltip title="CSS 3" arrow  placement="top">
-              <div className="my-auto"><img width="50" src={CSS} className="px-2"/> </div> 
+              <div className="my-auto pb-2"><img width="50" src={CSS} className="px-2"/> </div> 
             </Tooltip>
             
             <Tooltip title="Javascript" arrow  placement="top">
-              <div className="my-auto"><img width="50" src={JS} className="px-2"/> </div> 
+              <div className="my-auto pb-2"><img width="50" src={JS} className="px-2"/> </div> 
             </Tooltip>
             
             <Tooltip title="React.JS" arrow  placement="top">
-              <div className="my-auto"><img width="50" src={ReactIcon} className="px-2"/> </div> 
+              <div className="my-auto pb-2"><img width="50" src={ReactIcon} className="px-2"/> </div> 
             </Tooltip>
             
             <Tooltip title="Bootstrap" arrow  placement="top">
-              <div className="my-auto"><img width="50" src={Bootstrap} className="px-2" /></div>  
+              <div className="my-auto pb-2"><img width="50" src={Bootstrap} className="px-2" /></div>  
             </Tooltip>
             
             <Tooltip title="Sass" arrow placement="top">
-              <div className="my-auto"><img width="50" src={Sass} className="px-2" /></div>  
+              <div className="my-auto pb-2"><img width="50" src={Sass} className="px-2" /></div>  
             </Tooltip>
             
             <Tooltip title="Material" arrow  placement="top">
-              <div className="my-auto"><img width="50" src={Material} className="px-2" /></div>  
+              <div className="my-auto pb-2"><img width="50" src={Material} className="px-2" /></div>  
             </Tooltip>
             
             <Tooltip title="Git" arrow  placement="top">
-              <div className="my-auto"><img width="50" src={Git} className="px-2" /></div>
+              <div className="my-auto pb-2"><img width="50" src={Git} className="px-2" /></div>
             </Tooltip>
             
             <Tooltip title="Storybook" arrow  placement="top">
-              <div className="my-auto"><img height="34" src={Storybook} className="px-2" /></div>  
+              <div className="my-auto pb-2"><img height="34" src={Storybook} className="px-2" /></div>  
             </Tooltip>
             
             <Tooltip title="Chromatic" arrow  placement="top">
-            <div className="my-auto" ><img width="50" src={Chromatic} className="px-2" /></div>
+            <div className="my-auto pb-2" ><img width="50" src={Chromatic} className="px-2" /></div>
             </Tooltip>
           </div>
 
