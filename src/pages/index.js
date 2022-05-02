@@ -7,7 +7,24 @@ import MpdsWebPreview from '../images/MpdsWebPreview.svg';
 import SmMpdsWebPreview from '../images/sm_mpdsWebPreview.svg';
 import PrismaProduzEsocialPreview from '../images/PrismaProduzEsocialPreview.svg';
 import Sarges from '../images/sargesPreview.svg';
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
+import Ai from '../images/techsIcons/ai.svg';
+import Affinity from '../images/techsIcons/affinity.svg';
+import CSS from '../images/techsIcons/css3.svg';
+import HTML from '../images/techsIcons/html5.svg';
+import JS from '../images/techsIcons/js.svg';
+import Bootstrap from '../images/techsIcons/bootstrap.svg';
+import Figma from '../images/techsIcons/figma.svg';
+import Git from '../images/techsIcons/git.svg';
+import Kotlin from '../images/techsIcons/Kotlin.svg';
+import Material from '../images/techsIcons/materialui.svg';
+import Ps from '../images/techsIcons/ps.svg';
+import ReactIcon from '../images/techsIcons/react.svg';
+import Sass from '../images/techsIcons/sass.svg';
+import Uxpin from '../images/techsIcons/uxpin.svg'
+import Storybook from '../images/techsIcons/storybook.svg';
+import Chromatic from '../images/techsIcons/chromatic.svg'
+import Tooltip from '@mui/material/Tooltip';
 
 // styles
 const pageStyles = {
@@ -20,6 +37,13 @@ const headingStyles = {
   fontWeight: 500,
   fontSize: 24
 }
+const subHeadingStyles = {
+  fontFamily: "Work Sans, sans-serif",
+  fontWeight: 600,
+  fontSize: 16,
+  paddingTop: 30,
+  paddingBottom: 15
+}
 
 const linkStyle = {
   background: "#3D3B9D",
@@ -28,6 +52,7 @@ const linkStyle = {
   fontWeight: 600,
   fontSize: 16
 }
+
 
 // markup
 const IndexPage = () => {
@@ -84,7 +109,74 @@ const IndexPage = () => {
             </div>
           </main>
         </div>
+
+        <h5 style={subHeadingStyles} className="px-2 text-center">Designing and coding with:</h5>
+        
+          <div class="d-flex justify-content-center">
+            <Tooltip title="Kotlin" arrow  placement="top">
+              <div className="my-auto"><img width="50" src={Kotlin} className="px-2"/></div> 
+            </Tooltip>
+            <Tooltip title="HTML 5" arrow  placement="top">
+              <div className="my-auto"><img width="50" src={HTML} className="px-2"/> </div> 
+            </Tooltip>
+            
+            <Tooltip title="CSS 3" arrow  placement="top">
+              <div className="my-auto"><img width="50" src={CSS} className="px-2"/> </div> 
+            </Tooltip>
+            
+            <Tooltip title="Javascript" arrow  placement="top">
+              <div className="my-auto"><img width="50" src={JS} className="px-2"/> </div> 
+            </Tooltip>
+            
+            <Tooltip title="React.JS" arrow  placement="top">
+              <div className="my-auto"><img width="50" src={ReactIcon} className="px-2"/> </div> 
+            </Tooltip>
+            
+            <Tooltip title="Bootstrap" arrow  placement="top">
+              <div className="my-auto"><img width="50" src={Bootstrap} className="px-2" /></div>  
+            </Tooltip>
+            
+            <Tooltip title="Sass" arrow placement="top">
+              <div className="my-auto"><img width="50" src={Sass} className="px-2" /></div>  
+            </Tooltip>
+            
+            <Tooltip title="Material" arrow  placement="top">
+              <div className="my-auto"><img width="50" src={Material} className="px-2" /></div>  
+            </Tooltip>
+            
+            <Tooltip title="Git" arrow  placement="top">
+              <div className="my-auto"><img width="50" src={Git} className="px-2" /></div>
+            </Tooltip>
+            
+            <Tooltip title="Storybook" arrow  placement="top">
+              <div className="my-auto"><img height="34" src={Storybook} className="px-2" /></div>  
+            </Tooltip>
+            
+            <Tooltip title="Chromatic" arrow  placement="top">
+            <div className="my-auto" ><img width="50" src={Chromatic} className="px-2" /></div>
+            </Tooltip>
+          </div>
+
+          <div class="d-flex justify-content-center mt-3">
+            <Tooltip title="Figma" arrow  placement="top">
+              <div className="my-auto"><img height="34" className="px-2" src={Figma} /> </div> 
+            </Tooltip>
+            <Tooltip title="UXPin" arrow  placement="top">
+            <div className="my-auto"><img width="50" className="px-2" src={Uxpin} /> </div> 
+            </Tooltip>
+            <Tooltip title="Adobe AI" arrow  placement="top">
+            <div className="my-auto"><img width="50" className="px-2" src={Ai} /></div>  
+            </Tooltip>
+            <Tooltip title="Adobe PS" arrow  placement="top">
+            <div className="my-auto"><img width="50" className="px-2" src={Ps} /></div>  
+            </Tooltip>
+            <Tooltip title="Affinity" arrow  placement="top">
+            <div className="my-auto"><img width="50" className="px-2" src={Affinity} /> </div> 
+            </Tooltip>
+          </div>
+        
         </Layout>
+        
       </div>
     </>
   )
