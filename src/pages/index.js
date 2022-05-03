@@ -63,54 +63,12 @@ const IndexPage = () => {
       <Layout>
         <div className="container mt-3 mt-md-4">
           <main style={pageStyles}>
-            <h2 style={headingStyles} className="px-2 pb-4 pt-2 py-md-4">Olá! My name is Pedro Baltazar Relvas! Whether serving as a UI designer or 
+            <h2 style={headingStyles} className="px-2 pb-3 pt-2">Olá! My name is Pedro Baltazar Relvas! Whether serving as a UI designer or 
             UI developer, my goal is to create an end product that brings efficiency and work meaning to the user. 
             Mostly experienced in the healthcare niche, I enjoy collaborate with a cross-functional team who strives 
             for a simple aesthetic solution, usability, and continuity. &#128241; &#x1F4BB; &#x2728; </h2>
-            <div className="container">
-              <div className="row">
-              <div className="col-12 col-md-9">
-                <div className="row">
-                  <div className="col-12">
-                      <div className="position-relative">
-                        <a href="./mpdsWounds" class="stretched-link d-block py-2" style={linkStyle}>MpDS Wounds</a>
-                        <img src={MpdsWoundsPreview} alt="Mpds Wounds Preview"/>
-                      </div>
-                    </div>
-                </div>
 
-                <div className="row mt-3">
-                  <div className="col-12">
-                    <div className="row">
-                      <div className="col-6">
-                        <div className="position-relative">
-                          <a href="./prismaEsocialProduz" class="stretched-link d-block py-2" style={linkStyle}>Prisma, Produz and Esocial</a>
-                          <img src={PrismaProduzEsocialPreview} alt="Prisma Produz Esocial Preview"/>
-                        </div>
-                      </div>
-                      <div className="col-6">
-                        <div className="position-relative">
-                          <a href="./sarges" class="stretched-link d-block py-2" style={linkStyle}>Sarges</a>
-                          <img src={Sarges} alt="Sarges Preview"/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-                <div className="col-12 col-md-3 mt-3 mt-md-0">
-                  <div className="position-relative">
-                    <a href="./mpdsWeb"  class="stretched-link d-block py-2" style={linkStyle}>MpDS Web</a>
-                    <img src={MpdsWebPreview} className="d-none d-md-block" alt="Mpds Web Preview"/>
-                    <img src={SmMpdsWebPreview} className="d-md-none" alt="Mpds Web Preview"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </main>
-        </div>
-
-        <h5 style={subHeadingStyles} className="px-2 text-center">Designing and coding with:</h5>
+            <h5 style={subHeadingStyles} className="px-2 text-center pt-0 ">Designing and coding with:</h5>
         
           <div class="d-flex justify-content-center flex-wrap">
             <Tooltip title="Kotlin" arrow  placement="top">
@@ -174,6 +132,51 @@ const IndexPage = () => {
             <div className="my-auto"><img width="50" className="px-2" src={Affinity} /> </div> 
             </Tooltip>
           </div>
+
+            <div className="container mt-5">
+              <div className="row">
+              <div className="col-12 col-md-9">
+                <div className="row">
+                  <div className="col-12">
+                      <div className="position-relative">
+                        <a href="./mpdsWounds" class="stretched-link d-block py-2" style={linkStyle}>MpDS Wounds</a>
+                        <img src={MpdsWoundsPreview} alt="Mpds Wounds Preview"/>
+                      </div>
+                    </div>
+                </div>
+
+                <div className="row mt-3">
+                  <div className="col-12">
+                    <div className="row">
+                      <div className="col-6">
+                        <div className="position-relative">
+                          <a href="./prismaEsocialProduz" class="stretched-link d-block py-2" style={linkStyle}>Prisma, Produz and Esocial</a>
+                          <img src={PrismaProduzEsocialPreview} alt="Prisma Produz Esocial Preview"/>
+                        </div>
+                      </div>
+                      <div className="col-6">
+                        <div className="position-relative">
+                          <a href="./sarges" class="stretched-link d-block py-2" style={linkStyle}>Sarges</a>
+                          <img src={Sarges} alt="Sarges Preview"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div className="col-12 col-md-3 mt-3 mt-md-0">
+                  <div className="position-relative">
+                    <a href="./mpdsWeb"  class="stretched-link d-block py-2" style={linkStyle}>MpDS Web</a>
+                    <img src={MpdsWebPreview} className="d-none d-md-block" alt="Mpds Web Preview"/>
+                    <img src={SmMpdsWebPreview} className="d-md-none" alt="Mpds Web Preview"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+
+        
         
         </Layout>
         
