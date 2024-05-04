@@ -91,10 +91,10 @@ const MpdsWoundsPage = () => {
               <section className="row pt-3">
                 <div className="position-relative col-12 col-md-6">
                   <p className="position-absolute p-5 font-scale" style={{color: "#fff", marginLeft: 'auto',
-marginRight: 'auto',
-left: 0,
-right: 0,
-textAlign: 'center'}}>
+  marginRight: 'auto',
+  left: 0,
+  right: 0,
+  textAlign: 'center'}}>
                     As a Android Developer at the time, my main task was to follow and code all the UI/UX guidelines traced 
                     during the prototyping and usuability tests. For this to be accomplished, I needed to put aside 
                     most of the web patterns, and just focus on all that Android environment could give me. The journey 

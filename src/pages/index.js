@@ -1,12 +1,13 @@
 import * as React from "react"
 import "@fontsource/work-sans";
 import "@fontsource/noto-sans";
+import "@fontsource/manrope";
 import "../../css/main.min.css";
 import MpdsWoundsPreview from '../images/MpdsWoundsPreview.svg';
-import MpdsWebPreview from '../images/MpdsWebPreview.svg';
-import SmMpdsWebPreview from '../images/sm_mpdsWebPreview.svg';
+import SmMpdsWebPreview from '../images/sm_mpdsWebPreview.svg'
+import NeuroPreview from '../images/neuroPreview.svg';
 import PrismaProduzEsocialPreview from '../images/PrismaProduzEsocialPreview.svg';
-import Sarges from '../images/sargesPreview.svg';
+import MillerVillagePreview from '../images/millerVillagePreview.svg';
 import Layout from '../components/Layout';
 import Ai from '../images/techsIcons/ai.svg';
 import Affinity from '../images/techsIcons/affinity.svg';
@@ -25,162 +26,418 @@ import Uxpin from '../images/techsIcons/uxpin.svg'
 import Storybook from '../images/techsIcons/storybook.svg';
 import Chromatic from '../images/techsIcons/chromatic.svg'
 import Tooltip from '@mui/material/Tooltip';
+import { ThemeProvider, Typography } from "@mui/material";
+import theme from '../../themes/mui-theme'
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Link from '@mui/material/Link';
+import Container from '@mui/material/Container';
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  fontFamily: "Noto Sans, sans-serif"
-  //fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  fontFamily: "Work Sans, sans-serif",
-  fontWeight: 500,
-  fontSize: 24
-}
-const subHeadingStyles = {
-  fontFamily: "Work Sans, sans-serif",
-  fontWeight: 600,
-  fontSize: 16,
-  paddingTop: 30,
-  paddingBottom: 15
-}
-
-const linkStyle = {
-  background: "#3D3B9D",
-  paddingLeft: 16,
-  fontFamily: "Work Sans, sans-serif",
-  fontWeight: 600,
-  fontSize: 16
+const useStyles ={
+  '&.MuiLink-root':{
+    '&:hover':{
+      color: '#fff'
+    }
+  },
+  '&.MuiContainer-root':{
+    color: theme.palette.action.main,
+    fontFamily: "Noto Sans, sans-serif"
+  } 
 }
 
 
-// markup
 const IndexPage = () => {
   return (
-  <>
-    <div className="bg-primary">
-     
-      <Layout>
-        <div className="container mt-3 mt-md-4">
-          <main style={pageStyles}>
-            <h2 style={headingStyles} className="px-2 pb-3 pt-2">Olá! My name is Pedro Baltazar Relvas! Whether serving as a UI designer or 
-            UI developer, my goal is to create an end product that brings efficiency and work meaning to the user. 
-            Mostly experienced in the healthcare niche, I enjoy collaborate with a cross-functional team who strives 
-            for a simple aesthetic solution, usability, and continuity. &#128241; &#x1F4BB; &#x2728; </h2>
+    <>
+      <ThemeProvider theme={theme}>
+          <Layout>
+            <Container maxWidth="lg" component='main' sx={useStyles["&.MuiContainer-root"]}>
+              <Typography variant="stepTitleHeader" component="p" fontWeight={500} py={5} px={2}>
+                Hello! I'm Pedro Baltazar Relvas. Whether as a UI designer or developer, my goal is to create efficient and meaningful products. With a focus on healthcare, I enjoy collaborating in cross-functional teams, aiming for simplicity, usability, and a smooth user experience.
+              </Typography>
 
-            <h5 style={subHeadingStyles} className="px-2 text-center pt-0 ">Designing and coding with:</h5>
-        
-          <div class="d-flex justify-content-center flex-wrap">
-            <Tooltip title="Kotlin" arrow  placement="top">
-              <div className="my-auto pb-2"><img width="50" src={Kotlin} className="px-2"/></div> 
-            </Tooltip>
-            <Tooltip title="HTML 5" arrow  placement="top">
-              <div className="my-auto pb-2"><img width="50" src={HTML} className="px-2"/> </div> 
-            </Tooltip>
-            
-            <Tooltip title="CSS 3" arrow  placement="top">
-              <div className="my-auto pb-2"><img width="50" src={CSS} className="px-2"/> </div> 
-            </Tooltip>
-            
-            <Tooltip title="Javascript" arrow  placement="top">
-              <div className="my-auto pb-2"><img width="50" src={JS} className="px-2"/> </div> 
-            </Tooltip>
-            
-            <Tooltip title="React.JS" arrow  placement="top">
-              <div className="my-auto pb-2"><img width="50" src={ReactIcon} className="px-2"/> </div> 
-            </Tooltip>
-            
-            <Tooltip title="Bootstrap" arrow  placement="top">
-              <div className="my-auto pb-2"><img width="50" src={Bootstrap} className="px-2" /></div>  
-            </Tooltip>
-            
-            <Tooltip title="Sass" arrow placement="top">
-              <div className="my-auto pb-2"><img width="50" src={Sass} className="px-2" /></div>  
-            </Tooltip>
-            
-            <Tooltip title="Material" arrow  placement="top">
-              <div className="my-auto pb-2"><img width="50" src={Material} className="px-2" /></div>  
-            </Tooltip>
-            
-            <Tooltip title="Git" arrow  placement="top">
-              <div className="my-auto pb-2"><img width="50" src={Git} className="px-2" /></div>
-            </Tooltip>
-            
-            <Tooltip title="Storybook" arrow  placement="top">
-              <div className="my-auto pb-2"><img height="34" src={Storybook} className="px-2" /></div>  
-            </Tooltip>
-            
-            <Tooltip title="Chromatic" arrow  placement="top">
-            <div className="my-auto pb-2" ><img width="50" src={Chromatic} className="px-2" /></div>
-            </Tooltip>
-          </div>
+            <Box sx={{
+                background: 'linear-gradient(to right, rgb(11 18 49 / 20%), #0B1231)',
+                padding: '24px',
+                borderRadius: '16px',
+                maxWidth: 700,
+                margin: '0 auto',
+                backdropFilter: 'blur(12px)',
+                border: 'rgb(255 255 255 / .1) solid 1px'
+              }}>
+              <Typography variant="regularText" component='p' fontStyle='italic' textAlign='center' pb={2}>Designing and coding with:</Typography>
+  
+              <Stack direction="row"
+                justifyContent="center"
+                alignItems="center"
+                spacing={2}
+                mb={2}>
+                  <Tooltip title="Kotlin" arrow  placement="top">
+                    <img width="35" src={Kotlin}/>
+                  </Tooltip>
+                  <Tooltip title="HTML 5" arrow  placement="top">
+                    <img width="35" src={HTML} />
+                  </Tooltip>
+                  
+                  <Tooltip title="CSS 3" arrow  placement="top">
+                    <img width="35" src={CSS}/>
+                  </Tooltip>
+                  
+                  <Tooltip title="Javascript" arrow  placement="top">
+                    <img width="35" src={JS}/>
+                  </Tooltip>
+                  
+                  <Tooltip title="React.JS" arrow  placement="top">
+                    <img width="35" src={ReactIcon}/>
+                  </Tooltip>
+                  
+                  <Tooltip title="Bootstrap" arrow  placement="top">
+                    <img width="35" src={Bootstrap} />
+                  </Tooltip>
+                  
+                  <Tooltip title="Sass" arrow placement="top">
+                    <img width="35" src={Sass} />
+                  </Tooltip>
+                  
+                  <Tooltip title="Material" arrow  placement="top">
+                    <img width="35" src={Material} /> 
+                  </Tooltip>
+                  
+                  <Tooltip title="Git" arrow  placement="top">
+                    <img width="35" src={Git} />
+                  </Tooltip>
+                  
+                  <Tooltip title="Storybook" arrow  placement="top">
+                    <img height="35" src={Storybook} />
+                  </Tooltip>
+                  
+                  <Tooltip title="Chromatic" arrow  placement="top">
+                    <img width="35" src={Chromatic} />
+                  </Tooltip>
+              </Stack>
+                
+              <Stack direction="row"
+                justifyContent="center"
+                alignItems="center"
+                spacing={0}
+                mt={1}>
+                <Tooltip title="Figma" arrow  placement="top">
+                  <div className="my-auto"><img height="34" className="px-2" src={Figma} /> </div> 
+                </Tooltip>
+                <Tooltip title="UXPin" arrow  placement="top">
+                <div className="my-auto"><img width="50" className="px-2" src={Uxpin} /> </div> 
+                </Tooltip>
+                <Tooltip title="Adobe AI" arrow  placement="top">
+                <div className="my-auto"><img width="50" className="px-2" src={Ai} /></div>  
+                </Tooltip>
+                <Tooltip title="Adobe PS" arrow  placement="top">
+                <div className="my-auto"><img width="50" className="px-2" src={Ps} /></div>  
+                </Tooltip>
+                <Tooltip title="Affinity" arrow  placement="top">
+                <div className="my-auto"><img width="50" className="px-2" src={Affinity} /> </div> 
+                </Tooltip>
+              </Stack>
+            </Box>
+              
+              <Grid
+                container
+                direction="row"
+                justifyContent="space-between"
+                alignItems="stretch<"
+                spacing={2}
+                mt={3}>
+                {/* Miller Village */}
+                <Grid item xs={4}>
+                  <Link
+                  href="./millerVillageTycoon" underline="none" color="action" sx={useStyles["&.MuiLink-root"]}>
+                  <Stack direction="column"
+                      justifyContent="space-between"
+                      alignItems="stretch"
+                      spacing={2}
+                      className="project-square"
+                      height="100%"
+                      >
+                    
+                    <Box>
+                      <img src={MillerVillagePreview} alt="Prisma Produz Esocial Preview" width='100%'/>
+                        <Typography component="h5" my={2} variant="cardCompanyHeader">Cintesis & Univ. do Porto</Typography>
+                        <Typography component="h4" mb={1} variant="cardProjectTitle">Miller Village Tycoon
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                          </svg>
+                        </Typography>
+                        <Typography variant="regularText" component='p' mb={4}>
+                          Miller Village Tycoon gamifies asthma monitoring for teens with a daily Forced Expiratory Maneuver (FEM) using their smartphone's microphone. Successful FEMs earn rewards for upgrading structures and trading resources with other players. The app promotes daily asthma monitoring through interactive gameplay and a compelling storyline.
+                        </Typography>
+                      </Box>
+                    <Stack 
+                      direction="row"
+                      justifyContent="flex-start"
+                      alignItems="center"
+                      spacing={2}>
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <Box>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                            <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+                          </svg>
+                        </Box>
+                        <Typography variant="subjectText">Wireframing & Prototyping</Typography>
+                      </Stack>
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <Box>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+                            <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                            <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                            <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                          </svg>
+                        </Box>
+                        <Typography variant="subjectText">Interviews & Usability Tests</Typography>
+                      </Stack>
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <Box>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+                          </svg>
+                        </Box>
+                        <Typography variant="subjectText">Illustration</Typography>
+                      </Stack>
+                    </Stack>
+                    </Stack>
+                  </Link>
+                </Grid>
 
-          <div class="d-flex justify-content-center mt-3">
-            <Tooltip title="Figma" arrow  placement="top">
-              <div className="my-auto"><img height="34" className="px-2" src={Figma} /> </div> 
-            </Tooltip>
-            <Tooltip title="UXPin" arrow  placement="top">
-            <div className="my-auto"><img width="50" className="px-2" src={Uxpin} /> </div> 
-            </Tooltip>
-            <Tooltip title="Adobe AI" arrow  placement="top">
-            <div className="my-auto"><img width="50" className="px-2" src={Ai} /></div>  
-            </Tooltip>
-            <Tooltip title="Adobe PS" arrow  placement="top">
-            <div className="my-auto"><img width="50" className="px-2" src={Ps} /></div>  
-            </Tooltip>
-            <Tooltip title="Affinity" arrow  placement="top">
-            <div className="my-auto"><img width="50" className="px-2" src={Affinity} /> </div> 
-            </Tooltip>
-          </div>
+                 {/* Neuro*/}
+                <Grid item xs={4}>
+                  <Link href="#" underline="none" color="action" sx={useStyles["&.MuiLink-root"]}>
+                    <Stack direction="column"
+                      justifyContent="space-between"
+                      alignItems="stretch"
+                      spacing={2}
+                      className="project-square"
+                      height="100%">
+                     
+                     <Box>
+                      <img src={NeuroPreview} alt="Neuro Preview" width='100%'/>
+                        <Typography component="h5" my={2} variant="cardCompanyHeader">Fraunhofer & Univ. do Porto</Typography>
+                        <Typography component="h4" mb={1} variant="cardProjectTitle">
+                          Neuropsychological: Digital and remote application of Cognitive Deficit Screening Tests
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                          </svg>
+                        </Typography>
+                        <Typography variant="regularText" component='p' mb={4}>
+                          User research and design process for a digital version of cognitive deficit screening tests interface.
+                        </Typography>
+                      </Box>
+                      <Stack 
+                        direction="row"
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        spacing={2}>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                          <Box>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                              <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+                            </svg>
+                          </Box>
+                          <Typography variant="subjectText">Wireframing & Prototyping</Typography>
+                        </Stack>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                          <Box>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+                              <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                              <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                              <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                            </svg>
+                          </Box>
+                          <Typography variant="subjectText">Interviews</Typography>
+                        </Stack>
+                      </Stack>
+                    </Stack>
+                  </Link>
+                </Grid>
+                      
+                {/* Prisma Produz Esocial */}
+                <Grid item xs={4}>
+                  <Link href="./prismaEsocialProduz" underline="none" color="action" height="100%" sx={useStyles["&.MuiLink-root"]}>
+                    <Stack direction="column"
+                      justifyContent="space-between"
+                      alignItems="stretch"
+                      spacing={2}
+                      className="project-square"
+                      height="100%">
+                    <Box>
+                    <img src={PrismaProduzEsocialPreview} alt="Neuro Preview" width='100%'/>
+                      <Typography component="h5" my={2} variant="cardCompanyHeader">F3M</Typography>
+                      <Typography component="h4" mb={1} variant="cardProjectTitle">Prisma, eSocial & Produz</Typography>
+                      <Typography variant="regularText" component='p' mb={4}>
+                        Prisma offers software tailored for optics sector management; Produz specializes in textile industry management software; and eSocial provides comprehensive software solutions for IPSS management, encompassing Elderly Care, Child Care, and related services.
+                      </Typography>
+                    </Box>
+                    <Stack 
+                      direction="row"
+                      justifyContent="flex-start"
+                      alignItems="center"
+                      spacing={2}>
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <Box>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                            <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0"/>
+                          </svg>
+                        </Box>
+                        <Typography variant="subjectText">Front-End Development</Typography>
+                      </Stack>
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <Box>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                            <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+                          </svg>
+                        </Box>
+                        <Typography variant="subjectText"> Wireframing & Prototyping</Typography>
+                      </Stack>
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <Box>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bezier2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 0 1 2.5 1h1A1.5 1.5 0 0 1 5 2.5h4.134a1 1 0 1 1 0 1h-2.01q.269.27.484.605C8.246 5.097 8.5 6.459 8.5 8c0 1.993.257 3.092.713 3.7.356.476.895.721 1.787.784A1.5 1.5 0 0 1 12.5 11h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5H6.866a1 1 0 1 1 0-1h1.711a3 3 0 0 1-.165-.2C7.743 11.407 7.5 10.007 7.5 8c0-1.46-.246-2.597-.733-3.355-.39-.605-.952-1-1.767-1.112A1.5 1.5 0 0 1 3.5 5h-1A1.5 1.5 0 0 1 1 3.5zM2.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10 10a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+                          </svg>
+                        </Box>
+                        <Typography variant="subjectText">Logo Design</Typography>
+                      </Stack>
+                      <Stack direction="row" spacing={1} alignItems="center">
+                        <Box>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+                          </svg>
+                        </Box>
+                        <Typography variant="subjectText">Illustration</Typography>
+                      </Stack>
+                    </Stack>
+                    </Stack>
+                  </Link>
+                </Grid>
 
-            <div className="container mt-5">
-              <div className="row">
-              <div className="col-12 col-md-9">
-                <div className="row">
-                  <div className="col-12">
-                      <div className="position-relative">
-                        <a href="./mpdsWounds" class="stretched-link d-block py-2" style={linkStyle}>MpDS Wounds</a>
-                        <img src={MpdsWoundsPreview} alt="Mpds Wounds Preview"/>
-                      </div>
-                    </div>
-                </div>
+                <Grid item xs={6}>
+                  <Link href="./mpdsWounds" underline="none" color="action" height="100%" sx={useStyles["&.MuiLink-root"]}>
+                    <Stack direction="column"
+                      justifyContent="space-between"
+                      alignItems="stretch"
+                      spacing={2}
+                      className="project-square"
+                      height="100%">
+                    <Box>
+                    <img src={MpdsWoundsPreview} alt="Neuro Preview" width='100%'/>
+                      <Typography component="h5" my={2} variant="cardCompanyHeader">F3M & Fraunhofer</Typography>
+                      <Typography component="h4" mb={1} variant="cardProjectTitle">MPDS Wounds
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                        </svg>
+                      </Typography>
+                      <Typography variant="regularText" component='p' mb={4}>
+                        A mobile application crafted to enhance the swift and automated gathering of clinical images depicting the healing progression of pressure ulcers and various other wounds.
+                      </Typography>
+                    </Box>
+                    <Stack 
+                      direction="row"
+                      justifyContent="flex-start"
+                      alignItems="center"
+                      spacing={2}>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                      <Box>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-android" viewBox="0 0 16 16">
+                              <path d="M2.76 3.061a.5.5 0 0 1 .679.2l1.283 2.352A8.9 8.9 0 0 1 8 5a8.9 8.9 0 0 1 3.278.613l1.283-2.352a.5.5 0 1 1 .878.478l-1.252 2.295C14.475 7.266 16 9.477 16 12H0c0-2.523 1.525-4.734 3.813-5.966L2.56 3.74a.5.5 0 0 1 .2-.678ZM5 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                            </svg>
+                          </Box>
+                          <Typography variant="subjectText">Android Development</Typography>
+                        </Stack>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                          <Box>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                              <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+                            </svg>
+                          </Box>
+                          <Typography variant="subjectText"> Wireframing & Prototyping</Typography>
+                        </Stack>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                          <Box>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bezier2" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 0 1 2.5 1h1A1.5 1.5 0 0 1 5 2.5h4.134a1 1 0 1 1 0 1h-2.01q.269.27.484.605C8.246 5.097 8.5 6.459 8.5 8c0 1.993.257 3.092.713 3.7.356.476.895.721 1.787.784A1.5 1.5 0 0 1 12.5 11h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5H6.866a1 1 0 1 1 0-1h1.711a3 3 0 0 1-.165-.2C7.743 11.407 7.5 10.007 7.5 8c0-1.46-.246-2.597-.733-3.355-.39-.605-.952-1-1.767-1.112A1.5 1.5 0 0 1 3.5 5h-1A1.5 1.5 0 0 1 1 3.5zM2.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10 10a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                          </Box>
+                          <Typography variant="subjectText">Logo Design</Typography>
+                        </Stack>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                          <Box>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                              <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+                            </svg>
+                          </Box>
+                          <Typography variant="subjectText">Illustration</Typography>
+                          </Stack>
+                    </Stack>
+                    </Stack>
+                  </Link>
+                </Grid>
 
-                <div className="row mt-3">
-                  <div className="col-12">
-                    <div className="row">
-                      <div className="col-6">
-                        <div className="position-relative">
-                          <a href="./prismaEsocialProduz" class="stretched-link d-block py-2" style={linkStyle}>Prisma, Produz and Esocial</a>
-                          <img src={PrismaProduzEsocialPreview} alt="Prisma Produz Esocial Preview"/>
-                        </div>
-                      </div>
-                      <div className="col-6">
-                        <div className="position-relative">
-                          <a href="./sarges" class="stretched-link d-block py-2" style={linkStyle}>Sarges</a>
-                          <img src={Sarges} alt="Sarges Preview"/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-                <div className="col-12 col-md-3 mt-3 mt-md-0">
-                  <div className="position-relative">
-                    <a href="./mpdsWeb"  class="stretched-link d-block py-2" style={linkStyle}>MpDS Web</a>
-                    <img src={MpdsWebPreview} className="d-none d-md-block" alt="Mpds Web Preview"/>
-                    <img src={SmMpdsWebPreview} className="d-md-none" alt="Mpds Web Preview"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </main>
-        </div>
-
-        
-        
-        </Layout>
-        
-      </div>
+                <Grid item xs={6}>
+                  <Link href="./mpdsWeb" underline="none" color="action" height="100%" sx={useStyles["&.MuiLink-root"]}>
+                    <Stack direction="column"
+                      justifyContent="space-between"
+                      alignItems="stretch"
+                      spacing={2}
+                      className="project-square"
+                      height="100%">
+                    <Box>
+                    <img src={SmMpdsWebPreview} alt="Neuro Preview" width='100%'/>
+                      <Typography component="h5" my={2} variant="cardCompanyHeader">F3M</Typography>
+                      <Typography component="h4" mb={1} variant="cardProjectTitle">MPDS Web
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                        </svg>
+                      </Typography>
+                      <Typography variant="regularText" component='p' mb={4}>
+                        A web application that enables users to effortlessly oversee and access the status of every patient's processes, seamlessly integrated with MPDS Wounds.
+                      </Typography>
+                    </Box>
+                    <Stack 
+                      direction="row"
+                      justifyContent="flex-start"
+                      alignItems="center"
+                      spacing={2}>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                          <Box>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-square" viewBox="0 0 16 16">
+                              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                              <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0"/>
+                            </svg>
+                          </Box>
+                          <Typography variant="subjectText">React Dev.</Typography>
+                        </Stack>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                          <Box>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bezier2" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 0 1 2.5 1h1A1.5 1.5 0 0 1 5 2.5h4.134a1 1 0 1 1 0 1h-2.01q.269.27.484.605C8.246 5.097 8.5 6.459 8.5 8c0 1.993.257 3.092.713 3.7.356.476.895.721 1.787.784A1.5 1.5 0 0 1 12.5 11h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5H6.866a1 1 0 1 1 0-1h1.711a3 3 0 0 1-.165-.2C7.743 11.407 7.5 10.007 7.5 8c0-1.46-.246-2.597-.733-3.355-.39-.605-.952-1-1.767-1.112A1.5 1.5 0 0 1 3.5 5h-1A1.5 1.5 0 0 1 1 3.5zM2.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10 10a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+                            </svg>
+                          </Box>
+                          <Typography variant="subjectText">Logo Design</Typography>
+                        </Stack>
+                        <Stack direction="row" spacing={1} alignItems="center">
+                          <Box>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                              <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+                            </svg>
+                          </Box>
+                          <Typography variant="subjectText">Illustration</Typography>
+                        </Stack>
+                    </Stack>
+                    </Stack>
+                  </Link>
+                </Grid>
+              </Grid>
+            </Container>
+          </Layout>
+      </ThemeProvider>
     </>
   )
 }
