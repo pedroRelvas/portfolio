@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Grid, Typography } from "@mui/material"
-import theme from '../../themes/mui-theme'
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import SearchIcon from '@mui/icons-material/Search';
@@ -28,7 +27,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
     fourthStep= "4. Prototype",
     fourthStepDescription= "I interviewed people and read many papers about asthma in teenagers.",
     fifthIcon = <AssessmentIcon fontSize="large" color='action'></AssessmentIcon>,
-    fifthStep= "5. Prototype",
+    fifthStep= "5. Evaluation",
     fifthStepDescription= "I interviewed people and read many papers about asthma in teenagers.",
 }) => {
     return (
@@ -37,7 +36,8 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
             justifyContent="center"
             alignItems="center"
             spacing={{ xs: 2, md: 4 }}
-            mt={5} >
+            my={5}
+            py={5} >
             <Grid item xs={4} direction="row">
                 <Stack direction="row"
                     spacing={2}>
@@ -54,7 +54,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                         {firstIcon}
                     </Box>
                     <Stack direction='column' width={300}>
-                        <Typography variant="stepTitleHeader">{firstStep}</Typography>
+                        <Typography variant="stepTitle">{firstStep}</Typography>
                         <Typography variant="regularText">{firstStepDescription}</Typography>
                     </Stack>
                 </Stack>
@@ -75,7 +75,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                         {secondIcon}
                     </Box>
                     <Stack direction='column' width={300}>
-                        <Typography variant="stepTitleHeader">{secondStep}</Typography>
+                        <Typography variant="stepTitle">{secondStep}</Typography>
                         <Typography variant="regularText">{secondStepDescription}</Typography>
                     </Stack>
                 </Stack>
@@ -96,7 +96,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                         {thirdIcon}
                     </Box>
                     <Stack direction='column' width={300}>
-                        <Typography variant="stepTitleHeader">{thirdStep}</Typography>
+                        <Typography variant="stepTitle">{thirdStep}</Typography>
                         <Typography variant="regularText">{thirdStepDescription}</Typography>
                     </Stack>
                 </Stack>
@@ -118,7 +118,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                     </Box>
                 
                     <Stack direction='column' width={300}>
-                        <Typography variant="stepTitleHeader">{fourthStep}</Typography>
+                        <Typography variant="stepTitle">{fourthStep}</Typography>
                         <Typography variant="regularText">{fourthStepDescription}</Typography>
                     </Stack>
                 </Stack>
@@ -139,7 +139,7 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                         {fifthIcon}
                     </Box>
                     <Stack direction='column' width={300}>
-                        <Typography variant="stepTitleHeader">{fifthStep}</Typography>
+                        <Typography variant="stepTitle">{fifthStep}</Typography>
                         <Typography variant="regularText">{fifthStepDescription}</Typography>
                     </Stack>
                 </Stack>

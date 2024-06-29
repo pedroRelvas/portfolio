@@ -11,7 +11,7 @@ const ProjectHeader = ({projectTitle, entities, year}) => {
             pt={5}
             pb={12}>
             <Typography variant="projectInfoHeader">Project</Typography>
-            <Typography variant="projectTitleHeader">{projectTitle}</Typography>
+            <Typography variant="projectTitleHeader" maxWidth={600} textAlign='center'>{projectTitle}</Typography>
             <Typography variant="projectInfoHeader">{entities}</Typography>
             <Typography variant="projectInfoHeader">{year}</Typography>
         </Stack>

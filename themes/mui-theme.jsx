@@ -1,6 +1,8 @@
 import { createTheme } from "@mui/material";
 
-const theme = createTheme({
+let theme = createTheme()
+
+theme = createTheme(theme , {
     typography: {
       projectTitleHeader: { 
           fontSize: 40,
@@ -16,12 +18,15 @@ const theme = createTheme({
         textTransform: 'uppercase'
       },
       stepTitleHeader: {
-        fontSize: 24,
+        fontSize: 22,
         color: '#fff',
         fontFamily: "Work Sans, sans-serif",
         fontWeight: 600,
+        [theme.breakpoints.up('md')]: {
+          padding: '0px 160px'
+        }
       },
-      stepTitleHeader: {
+      stepTitle: {
         fontSize: 22,
         color: '#fff',
         fontFamily: "Work Sans, sans-serif",
@@ -31,7 +36,10 @@ const theme = createTheme({
         fontSize: 22,
         color: '#fff',
         fontWeight: 600,
-        fontFamily: "Work Sans, sans-serif"
+        fontFamily: "Work Sans, sans-serif",
+        [theme.breakpoints.up('md')]: {
+          padding: '0px 160px'
+        }
       },
       miniTitle: {
         fontSize: 20,
@@ -45,7 +53,38 @@ const theme = createTheme({
         fontSize: 18,
         color: '#fff',
         fontFamily: "Work Sans, sans-serif",
-        lineHeight: 1.5,
+        lineHeight: "38px",
+        fontWeight: 400,
+        letterSpacing: '-.018em'
+      },
+      pRegularText: {
+        fontSize: 18,
+        color: '#fff',
+        fontFamily: "Work Sans, sans-serif",
+        lineHeight: "38px",
+        fontWeight: 400,
+        letterSpacing: '-.018em',
+        [theme.breakpoints.up('md')]: {
+          padding: '32px 160px'
+        }
+      },
+      emphasisRegularText: {
+        fontSize: 28,
+        color: '#fff',
+        fontFamily: "Work Sans, sans-serif",
+        lineHeight: "48px",
+        fontWeight: 500,
+        letterSpacing: '-.028em',
+        [theme.breakpoints.up('md')]: {
+          padding: '32px 160px'
+        }
+      },
+      caption: {
+        fontSize: 14,
+        color: '#fff',
+        fontFamily: "Work Sans, sans-serif",
+        lineHeight: "36px",
+        fontStyle: 'italic',
         fontWeight: 400,
         letterSpacing: '-.018em'
       },
@@ -56,7 +95,10 @@ const theme = createTheme({
       },
       cardProjectTitle:{
         fontFamily: "'Noto Sans', sans-serif", 
-        letterSpacing: '.1em'
+        letterSpacing: '.1em',
+        fontSize: '1.5rem',
+        fontWeight: '500',
+        lineHeight: '1.2'
       },
       subjectText:{
         fontFamily: "'Noto Sans', sans-serif", 
@@ -72,12 +114,10 @@ const theme = createTheme({
             main: '#111E56',
             light: '#283982',
             dark: '#1A2241',
-            // contrastText: will be calculated to contrast with palette.primary.main
         },
         secondary: {
             main: '#E0C2FF',
             light: '#F5EBFF',
-            // dark: will be calculated from palette.secondary.main,
             contrastText: '#47008F',
         },
         action: {
