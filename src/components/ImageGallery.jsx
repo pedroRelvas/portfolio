@@ -1,29 +1,7 @@
 import React, { useState } from 'react';
-import { Grid, Card, CardMedia, CardContent, Typography, Button, Box } from '@mui/material';
-import EsocialFirstIlus from '../images/prismaEsocialProduz/esocialIlust1.svg';
-import EsocialSecondIlus from '../images/prismaEsocialProduz/esocialIlust2.svg';
-import PrismaFirstIlus from '../images/prismaEsocialProduz/prismaIlust1.svg';
-import PrismaSecondIlus from '../images/prismaEsocialProduz/prismaIlust2.svg';
-import ProduzFirstIlus from '../images/prismaEsocialProduz/produzIlust1.svg';
-import ProduzSecondIlus from '../images/prismaEsocialProduz/produzIlust2.svg';
-import AllThree from '../images/prismaEsocialProduz/allThree.png';
-import PrismaLogin from '../images/prismaEsocialProduz/prismaLogin.png';
+import { Card, CardMedia, CardContent, Typography, Button, Box } from '@mui/material';
 
-const images = [
-  {
-    src: AllThree,
-    title: 'Software Previews',
-    description: 'Screens;'
-  },
-  {
-    src: PrismaLogin,
-    title: 'Prisma Login',
-    description: 'Software management for the textile industry;'
-  },
-  // Add more images as needed
-];
-
-const ImageGallery = () => {
+const ImageGallery =  ({ images, widthGallery = 800, marginTop = 0, heightGallery }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevious = () => {
@@ -37,15 +15,14 @@ const ImageGallery = () => {
   const currentImage = images[currentIndex];
 
   return (
-    <Box textAlign="center">
-      <Grid container justifyContent="center">
-        <Grid item xs={12}>
-          <Card>
+    <Box textAlign="center" alignSelf="center" mt={marginTop}>
+   
+          <Card sx={{width: widthGallery}}>
             <CardMedia
-            height='800'
               component="img"
               image={currentImage.src}
               alt={currentImage.title}
+              height={heightGallery}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -56,8 +33,7 @@ const ImageGallery = () => {
               </Typography>
             </CardContent>
           </Card>
-        </Grid>
-      </Grid>
+
       <Box mt={2}>
         <Button variant="contained" color="primary" onClick={handlePrevious} sx={{ mr: 2 }}>
           Previous

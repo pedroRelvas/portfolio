@@ -29,18 +29,22 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
     fifthIcon = <AssessmentIcon fontSize="large" color='action'></AssessmentIcon>,
     fifthStep= "5. Evaluation",
     fifthStepDescription= "I interviewed people and read many papers about asthma in teenagers.",
+    isFifthSlotHidden = false
 }) => {
     return (
         <Grid container
             direction="row"
+            spacing={2}
+            my={5}
+            py={5}
             justifyContent="center"
             alignItems="center"
-            spacing={{ xs: 2, md: 4 }}
-            my={5}
-            py={5} >
-            <Grid item xs={4} direction="row">
+             >
+            <Grid item md={12} lg={6} xl={4}>
                 <Stack direction="row"
-                    spacing={2}>
+                    spacing={2}
+                    justifyContent="center"
+                    alignItems="center">
                     <Box
                         sx={{
                         width: 85,
@@ -59,9 +63,11 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                     </Stack>
                 </Stack>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item md={12} lg={6} xl={4}>
                 <Stack direction="row"
-                    spacing={2}>
+                    spacing={2}
+                    justifyContent="center"
+                    alignItems="center">
                     <Box
                         sx={{
                         width: 85,
@@ -80,9 +86,11 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                     </Stack>
                 </Stack>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item md={12} lg={6} xl={4}>
                 <Stack direction="row"
-                    spacing={2}>
+                    spacing={2}
+                    justifyContent="center"
+                    alignItems="center">
                     <Box
                         sx={{
                         width: 85,
@@ -101,9 +109,11 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                     </Stack>
                 </Stack>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item md={12} lg={6} xl={4}>
                 <Stack direction="row"
-                    spacing={2}>
+                    spacing={2}
+                    justifyContent="center"
+                    alignItems="center">
                     <Box
                         sx={{
                         width: 85,
@@ -123,9 +133,11 @@ const ProjectSteps = ({firstIcon = <SearchIcon fontSize="large" color='action'><
                     </Stack>
                 </Stack>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item md={12} lg={6} xl={4} hidden={isFifthSlotHidden}>
                 <Stack direction="row"
-                    spacing={2}>
+                    spacing={2}
+                    justifyContent="center"
+                    alignItems="center">
                     <Box
                         sx={{
                         width: 85,

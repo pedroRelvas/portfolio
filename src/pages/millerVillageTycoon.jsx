@@ -18,21 +18,14 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import PrintScreenOldApp1 from '../images/millerVillageTycoonProject/pic1.png';
-import PrintScreenOldApp2 from '../images/millerVillageTycoonProject/pic2.png';
+import PrintScreenOldApp1 from '../images/millerVillageTycoonProject/pic1.jpg';
+import PrintScreenOldApp2 from '../images/millerVillageTycoonProject/pic2.jpg';
 import PrintScreenOldApp3 from '../images/millerVillageTycoonProject/pic3.jpg';
 import PrintScreenOldApp4 from '../images/millerVillageTycoonProject/pic4.jpg';
 import Portugal from '../images/millerVillageTycoonProject/portugal.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { BarChart } from '@mui/x-charts/BarChart';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
-import SummarizeIcon from '@mui/icons-material/Summarize';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import FigmaIcon from '../images/techsIcons/figma.svg';
 import MsTeamsIcon from '../images/techsIcons/msTeams.svg';
@@ -40,11 +33,11 @@ import CakeIcon from '@mui/icons-material/Cake';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import IframeWithLoading from '../components/IframeWithLoading';
 import DeviceHubIcon from '@mui/icons-material/DeviceHub';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import {StyledTableCell, StyledTableRow} from '../../src/pages/styles/millerVillage/useStyles'
+import Grid from '@mui/material/Grid';
 
 const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
 const pData = [2400, 1398, 9800, 3908, 4800, 3800, 4300];
@@ -74,7 +67,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const MillerVillageTycoonPage = () => {
 
     const [open, setOpen] = React.useState(false);
-
+    
     const handleClickOpen = () => {
         setOpen(true);
     };
@@ -100,7 +93,13 @@ const MillerVillageTycoonPage = () => {
                             alignItems="center"
                             flexDirection='column'
                             bgcolor={theme.palette.primary.light}
-                            pb={5}>
+                            pb={{
+                                xs: 1,
+                                sm: 2,
+                                md: 3,
+                                lg: 4,
+                                xl: 5
+                            }}>
                             <ProjectBasicInfo 
                                 info="Miller Village Tycoon gamifies the asthma monitoring process (Forced Expiratory Maneuver) for adolescents aged 14 to 17 by integrating it into a village-building game, aiming to enhance adherence to disease monitoring. Nevertheless, the main and only objective is to seamlessly incorporate the maneuver into the game's storyline.">
                             </ProjectBasicInfo>
@@ -111,29 +110,51 @@ const MillerVillageTycoonPage = () => {
                     firstProjectStep={
                         <ProjectSection topic="1. Research & Interviews" >
                             <Box mb={10}>
-                                <Typography variant="pRegularText" component='p'>
+                                <Typography variant="pRegularText" component='p' >
                                     All started with InspirersKids, an extension of the <Link sx={{color: '#00B9C4'}} href="https://cintesis.eu/en/portfolio-items/airdoc/">AIRDOC ecosystem</Link> by MEDIDA and CINTESIS, which developed a mobile app for caregivers of children and adolescents with chronic or acute respiratory conditions to securely transmit medical data to a central server.
                                 </Typography>
-                                
-                                <Stack direction="row"
-                                    justifyContent="space-between"
-                                    alignItems="center"
-                                    spacing={1}
-                                    pt={4}>
-                                    <img width='200' height='auto' src={PrintScreenOldApp1}></img>
-                                    <img width='200' height='auto' src={PrintScreenOldApp2}></img>
-                                    <img width='200' height='auto' src={PrintScreenOldApp3}></img>
-                                    <img width='200' height='auto' src={PrintScreenOldApp4}></img>
-                                </Stack>
 
-                                <Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>Print screens of the InspirerKids on the Lung Function Module</Typography>
 
-                                <Typography variant="pRegularText" component='p'>
+                                <Grid container 
+                                    spacing={2} 
+                                    pt={4} 
+                                    direction="row"
+                                    justifyContent="center"
+                                    alignItems="center">
+                                    <Grid item sm={6} md={4} lg={3} textAlign="center">
+                                        <img width='150' height='308' style={{borderRadius: '2px'}} src={PrintScreenOldApp1}></img>
+                                    </Grid>
+                                    <Grid item sm={6} md={4} lg={3} textAlign="center">
+                                        <img width='150' height='308' style={{borderRadius: '2px'}} src={PrintScreenOldApp2}></img>
+                                    </Grid>
+                                    <Grid item sm={6} md={4} lg={3} textAlign="center">
+                                        <img width='150' height='308' style={{borderRadius: '2px'}} src={PrintScreenOldApp3}></img>
+                                    </Grid>
+                                    <Grid item sm={6} md={4} lg={3} textAlign="center">
+                                        <img width='150' height='308' style={{borderRadius: '2px'}} src={PrintScreenOldApp4}></img>
+                                    </Grid>
+                                </Grid>
+
+                                <Typography variant="caption" component='p' pb={3} pt={2} textAlign='center'>Print screens of the Lung Function Module and main menu of InspirerKids</Typography>
+
+                                <Typography variant="pRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(0),
+                                            },
+                                        }}>
                                     The Lung Function module allowed users to record the sound of their respiration by following simple instructions and then send this information directly to their doctor.
                                     My objective was to implement gamification on it, — oriented to the Forced Expiratory Maneuver procedure — for adolescents with asthma, aged 14 to 17. 
                                 </Typography>
 
-                                <Typography variant="emphasisRegularText" component='p'>
+                                <Typography variant="emphasisRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(0),
+                                            },
+                                        }}>
                                     At this stage, teens begin to seek more independence and responsibility, allowing us to create a positive experience without relying heavily on parents or caregivers.
                                 </Typography>
 
@@ -151,218 +172,72 @@ const MillerVillageTycoonPage = () => {
                                 </Typography>
                             </Box>
                             <Typography variant="stepTitleHeader" mb={2}>Interview Guide & User Persona</Typography>
-                            <Typography variant="pRegularText" component='p'>
+                            <Typography variant="pRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(0),
+                                            },
+                                        }}>
                                 Interviews with both adolescents and adults with asthma were conducted not only at the project's initial stage but throughout its duration. Finding participants was challenging due to privacy concerns and bureaucratic obstacles.
                             </Typography>
-                            <Typography variant="emphasisRegularText" component='p'>I conducted semi-structured interviews using a thematic question guide and mind maps, obtained recording permissions and participant consent, and planned to start with easy questions while maintaining a compassionate approach.</Typography>
-            
-                        <Dialog
-                            open={open}
-                            maxWidth='xl'
-                            TransitionComponent={Transition}
-                            keepMounted
-                            onClose={handleClose}
-                            aria-describedby="alert-dialog-slide-description"
-                            sx={{'&.MuiPaper-root':{
-                                bgcolor: '#283982'
-                            } }}
-                        >
-                            <DialogTitle>Interview Map</DialogTitle>
-                            <DialogContent>
-                                <DialogContentText id="alert-dialog-slide-description">
-                                    <TableContainer sx={useStyles["&.MuiTableContainer-root"]} component={Paper}>
-                                                                    <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                                                                        <TableHead>
-                                                                            <TableRow>
-                                                                                <TableCell><Typography variant="regularText" fontWeight="700">Asthma as a whole *</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText" fontWeight="700">Entertainment</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText" fontWeight="700">School</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText" fontWeight="700">Symptoms</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText" fontWeight="700">Medication</Typography></TableCell>
-                                                                            </TableRow>
-                                                                        </TableHead>
-                                                                        <TableBody>
-                                                                            <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                                                                                <TableCell><Typography variant="regularText">Can you describe your day-life in three words?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">What kind of apps do you use everyday?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">What your favourite class at school?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">What kind of sympthoms do you have?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">What type of medication you take?</Typography></TableCell>
-                                                                            </TableRow>
-                                                                            <TableRow
-                                                                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                                            >
-                                                                                <TableCell><Typography variant="regularText">Can you tell me how asthma plays a role in your daily-basis?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">What type a game do you like the most (If he/she plays games)?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">Can you describe how you manage asthma during school time?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">What’s you main problem?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">Which type of inhaler do you use?</Typography></TableCell>
-                                                                            </TableRow>
-                                                                            <TableRow
-                                                                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                                            >
-                                                                                <TableCell><Typography variant="regularText">Tell me about your daily routine.</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">How great it would be playing a game that could help control your asthma?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">How you feel when you fail classes?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">How an app can help you with your symptoms/flareups?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">Tell me the last time you had problems with your inhaler.</Typography></TableCell>
-                                                                            </TableRow>
-                                                                            <TableRow
-                                                                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                                            >
-                                                                                <TableCell><Typography variant="regularText">-</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">What character do you liketo be if that game was available?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">How your friends at schoolreact when you fail classes?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">Do your doctors make a plan for you to control your flareups?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">How environment matters when you take your medication?</Typography></TableCell>
-                                                                            </TableRow>
-                                                                            <TableRow
-                                                                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                                            >
-                                                                                <TableCell><Typography variant="regularText">-</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">Tell me a funny story about a time you were playing.</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">-</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">What type of environment triggers your asthma?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">What do you think that can change to make your daily-basis more easy?</Typography></TableCell>
-                                                                            </TableRow>
-                                                                            <TableRow
-                                                                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                                            >
-                                                                                <TableCell><Typography variant="regularText">-</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">-</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">-</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">Who you call for when you have a flareup?</Typography></TableCell>
-                                                                                <TableCell><Typography variant="regularText">-</Typography></TableCell>
-                                                                            </TableRow>
-                                                                        </TableBody>
-                                                                    </Table>
-                                    </TableContainer>
-                                    <Typography fontSize={10} py={1}>* I started the interview with one or two questions of this theme</Typography>
-                                </DialogContentText>
-                            </DialogContent>
-                            <DialogActions>
-                            <Button onClick={handleClose}>Ok</Button>
-                            </DialogActions>
-                        </Dialog>
+                            <Typography variant="emphasisRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(0),
+                                            },
+                                        }}>I conducted semi-structured interviews using a thematic question guide and mind maps, obtained recording permissions and participant consent, and planned to start with easy questions while maintaining a compassionate approach.</Typography>
 
-                        <Typography pt={2} variant="pRegularText" component='p'>
+                        <Typography pt={2} variant="pRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(5),
+                                            },
+                                        }}>
                             The Informed Consent Form consisted of two parts: an Information Sheet, which provided details about the study, and a Certificate of Consent for signatures if you chose to participate, including an assent form for children under 16.
                         </Typography>
 
-                            <Box>
-                                <Accordion mt={4} mb={10} sx={{bgcolor: "#1a2241", color: "#fff" }}>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon color="action"/>}
-                                    aria-controls="panel1-content"
-                                    id="panel1-header"
-                                >
-                                    <Stack direction="row"
-                                        justifyContent="center"
-                                        alignItems="center"
-                                        spacing={5}>
-                                            <Stack spacing={2} direction="row" alignItems="center">
-                                                <Avatar></Avatar>
-                                                <Box>
-                                                    <Typography sx={{textWrap: 'nowrap'}} variant="regularText" fontWeight={700}>Amilquer, 14</Typography>
-                                                    <Typography>Student</Typography>
-                                                </Box>
-                                            </Stack>
-                                        <Typography variant="regularText" fontStyle='italic' pr={3}>Bio, behaviors, goals, pain points & scenario.</Typography>
-                                    </Stack>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <Stack direction='column' spacing={1} >
-                                        <Typography variant="regularText" pb={2}>Amilquer Bernardo, a <b>14-year-old</b> student, loves playing and creating video games on his own, especially since he can't go outside for sports. He tries to involve friends in his gaming world, but sometimes they make fun of his sports skills, affecting his confidence. Amilquer's doctor recommends he does the Forced Expiratory Maneuver (FEM) every day between 10 am and 10:30 am. But during school, he's shy about asking to use the bathroom at that time. He doesn't want to tell his friends because FEM takes a while, and he usually comes back 10 or 15 minutes later. On challenging days, he might skip it.</Typography>
-                                        <Box pb={2}>
-                                            <TableContainer sx={useStyles["&.MuiTableContainer-root"]} component={Paper}>
-                                                <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                                                    <TableHead>
-                                                        <TableRow>
-                                                            <TableCell><Typography variant="regularText" fontWeight="700">Behaviors</Typography></TableCell>
-                                                            <TableCell><Typography variant="regularText" fontWeight="700">Goals</Typography></TableCell>
-                                                            <TableCell><Typography variant="regularText" fontWeight="700">Pain Points</Typography></TableCell>
-                                                        </TableRow>
-                                                    </TableHead>
-                                                    <TableBody>
-                                                        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                                                            <TableCell><Typography variant="regularText">Avoids exercising due to asthma</Typography></TableCell>
-                                                            <TableCell><Typography variant="regularText">Seek acceptance from friends and colleagues</Typography></TableCell>
-                                                            <TableCell><Typography variant="regularText">Finds treatments dull</Typography></TableCell>
-                                                        </TableRow>
-                                                        <TableRow
-                                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                        >
-                                                        <TableCell><Typography variant="regularText">Has difficulty connecting with male friends over team sports</Typography></TableCell>
-                                                        <TableCell><Typography variant="regularText">Find enjoyment and motivation in self-monitoring</Typography></TableCell>
-                                                        <TableCell><Typography variant="regularText">Friends and colleagues don't understand his issues</Typography></TableCell>
-                                                        </TableRow>
-                                                        <TableRow
-                                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                        >
-                                                        
-                                                        <TableCell><Typography variant="regularText">Finds joy in playing games on his mobile phone and computer</Typography></TableCell>
-                                                        <TableCell><Typography variant="regularText">Overcome the habit of hiding</Typography></TableCell>
-                                                        <TableCell align="center"><Typography variant="regularText">-</Typography></TableCell>
-                                                        </TableRow>
-                                                        <TableRow
-                                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                                        >
-                                                        <TableCell><Typography variant="regularText">Feels sad and less capable when having to go to the hospital or facing challenges in school</Typography></TableCell>
-                                                        <TableCell align="center"><Typography variant="regularText">-</Typography></TableCell>
-                                                        <TableCell align="center"><Typography variant="regularText">-</Typography></TableCell>
-                                                        </TableRow>
-                                                    </TableBody>
-                                                </Table>
-                                            </TableContainer>
-                                        </Box>
-                                        
-                                        <Divider></Divider>
-
-                                        <Typography pt={3} variant="miniTitle">Scenario</Typography>
-                                        <Typography pt={1} pb={4} variant="regularText">With the new feature in Lung Function, Amilquer can now enjoy playing a simulation game! It's 10:30, and Amilquer is in the school's living room discussing a group project with his friends when his mobile phone rings. A notification appears on the display: 'Time to do the FEM'! 
-                                        </Typography>
-                                        <Typography pb={4} variant="regularText">
-                                        Amilquer smiles and grabs his friends' attention: 'Do you want to see the village that I'm building?' — raising one eyebrow — 'Yes, show me what you got!'
-                                        'First of all, every day, I have to do this type of maneuver to give wind to my windmills... because it’s the only source of energy that can produce electricity for my farms and buildings.' Their friends gather closer. 'So, your village runs entirely on renewable energies?' — asks the most nerdy one — 'Yes, Mr. Jorge, you can be damn sure' — everyone laughs.
-                                        </Typography>
-                                        <Typography pb={4} variant="regularText">
-                                            Amilquer performs three perfectly forced expirations. — 'Calm down, Amilquer! The mills need wind, not tornados' — breathless, Amilquer responds: 'That’s one of the challenges! I have to do this every day, so my citizens have electricity to do their work on the farms and in other industries. Now, after this, I can see my beautiful village and start building new things on it!'. One of his friends looks at the 'city builder' and asks: 'How?'. 'How? Just like Sim City! As the mayor of the village, I receive their taxes/resources to raise and update all the structures. And then, I can even negotiate things with other fellow mayors, other players like me!'.
-                                            All of his friends say in chorus: 'Wow, it’s amazing!'"
-                                        </Typography>
-                                    </Stack>
-                                </AccordionDetails>
-                                </Accordion>
+                        <Box mx='auto'>
+                                <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FTawtNI1VrduA3p9H2oGNW2%2FPerfil-and-Interview-Guide---Miller-Village(English)%3Fnode-id%3D0-1%26t%3DFHXsDqmyNUFLqJGf-1" />                          
                             </Box>
-                            
-                            <Stack mt={2}  
-                                direction="row"
-                                justifyContent="center"
-                                alignItems="center"
-                                spacing={2}>
-                                <Button variant="contained" color="primary" align='center' size="large" startIcon={<SummarizeIcon />} onClick={handleClickOpen}>
-                                    Interview Map
-                                </Button>
-                                <Button variant="outlined" color="secondary" align='center' size="large" startIcon={<AccountCircleIcon />} onClick={handleClickOpen}>
-                                    User Persona
-                                </Button>
-                            </Stack>
+            
                         </ProjectSection>
                     }
                     secondProjectStep={
                         <ProjectSection topic="2. Concept">
-                            <Typography variant="pRegularText" component='p'>"Exploring themes ranging from race cars to vessels reminiscent of the Age of Discovery, various ideas were considered. Ultimately, the concept of a 'city builder' resonated most with me, offering an endless, engaging process. The progression of structures and technologies, coupled with strategic village planning, promises players a visually immersive journey rich in challenges and social interactions. This is particularly true when integrating the trading feature, allowing players to engage with others facing similar health challenges."</Typography>
+                            <Typography variant="pRegularText" component='p'>"Exploring themes ranging from race cars to vessels reminiscent of the Age of Discovery, various ideas were considered. Ultimately, the concept of a 'city builder' resonated most with me, offering an endless, engaging process. The progression of structures and technologies, coupled with strategic village planning, promises players a visually immersive journey rich in challenges and social interactions. This is particularly true when integrating the trading feature, allowing players to engage with others facing similar health challenges." MOODBOARDS</Typography>
                         </ProjectSection> 
                     }
                     thirdProjectStep={
                         <ProjectSection topic="3. Wireframing">
-                            <Typography variant="pRegularText" component='p'>
+                            <Typography variant="pRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(5),
+                                            },
+                                        }}>
                                 Developing task flows and user flows allows us to comprehend the user's journey in completing the FEM. This results in a comprehensive mapping of all functionalities and information embedded in the app.
+                                Desde inicio eu fiz Functional Requirements: Structure of the mobile app do insirer kids
                             </Typography>
-                            <Typography variant="pRegularText" component='p'>Desde inicio eu fiz Functional Requirements: Structure of the mobile app do insirer kids</Typography>
-                            <Box mx='auto'>
+                            <Box mx='auto' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(0),
+                                            },
+                                        }}>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FEm9ZNkCqoUxySenf1v2VtM%2FTask-Flow-and-User-Flow%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3D1xt2Blq4oJUjDshT-1" />                          
                             </Box>
-                            <Typography variant="pRegularText" component='p'>
+                            <Typography variant="pRegularText" component='p' sx={{
+                                            pb: {
+                                            xs: theme.spacing(5),
+                                            sm: theme.spacing(5),
+                                            md: theme.spacing(5),
+                                            },
+                                        }}>
                                 "Bringing the concept to fruition was a deliberate and necessary endeavor. As you can observe in the version history, meticulous notes were taken, and various sketches were crafted. Through 9 iterations, numerous heuristic issues were identified and rectified, granting us a degree of assurance as we embark on creating the low-fi prototype."
                             </Typography>
                             <Box mx='auto'>
@@ -372,15 +247,11 @@ const MillerVillageTycoonPage = () => {
                     }
                     fourthProjectStep={
                         <ProjectSection topic="4. Prototype">
-                            <Typography variant="pRegularText" component='p'>
-                                Hi-fi
-                            </Typography>
+                            <Typography variant="stepTitleHeader" mb={2}>Hi-Fi</Typography>
                             <Box mx='auto'>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fs0OQx8uxyLyBD134jB3W4f%2FHi-Fi-FEM%3Fnode-id%3D1-4%26starting-point-node-id%3D1%253A2%26show-proto-sidebar%3D1%26scaling%3Dscale-down%26t%3D8lX1z6yzrlFYKqLF-1" />
                             </Box>
-                            <Typography variant="pRegularText" component='p'>
-                                Design System
-                            </Typography>
+                            <Typography variant="stepTitleHeader" mb={2}>Design System</Typography>
                             <Box mx='auto'>
                                 <IframeWithLoading src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2F5dkB8O9OnEH5UvA9JGxzYx%2FDesign-System-of-Miller-Village-Tycoon%3Fnode-id%3D0-1%26t%3DGMrMy2bq17s5TG5w-1" />
                             </Box>

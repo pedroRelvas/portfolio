@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Grid, Link, Stack, Box, Typography } from '@mui/material';
 import EastIcon from '@mui/icons-material/East';
 
-const ProjectCard = ({ itemGrid = 4, href, imageSrc, altText, company, projectTitle, description, footerSubjects, onLoad }) => {
+const ProjectCard = ({ itemGrid = { xs: 12, sm: 6, md: 4 }, href, imageSrc, altText, company, projectTitle, description, footerSubjects, onLoad, isNotACaseStudy }) => {
   const useStyles = {
     '&.MuiLink-root': {
       '&:hover': {
@@ -18,7 +18,7 @@ const ProjectCard = ({ itemGrid = 4, href, imageSrc, altText, company, projectTi
   };
 
   return (
-    <Grid item xs={itemGrid}>
+    <Grid item {...itemGrid}>
       <Link href={href} underline="none" color="action" sx={useStyles["&.MuiLink-root"]}>
         <Stack direction="column"
           justifyContent="space-between"
@@ -34,6 +34,7 @@ const ProjectCard = ({ itemGrid = 4, href, imageSrc, altText, company, projectTi
               {projectTitle}
             </Typography>
             <EastIcon pl={2} sx={{ verticalAlign: 'text-bottom' }}></EastIcon>
+            <Typography variant="regularText" component='p' fontWeight={500} fontStyle='italic' color={'#00ff7b'} hidden={isNotACaseStudy}>Case Study</Typography>
             <Typography variant="regularText" component='p' mb={4} mt={1}>
               {description}
             </Typography>
