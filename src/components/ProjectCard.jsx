@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Grid, Link, Stack, Box, Typography } from '@mui/material';
 import EastIcon from '@mui/icons-material/East';
 
-const ProjectCard = ({ itemGrid = { xs: 12, sm: 6, md: 4 }, href, imageSrc, altText, company, projectTitle, description, footerSubjects, onLoad, isNotACaseStudy }) => {
+const ProjectCard = ({ imageSrc, altText, company, projectTitle, description, footerSubjects, onLoad, isNotACaseStudy }) => {
   const useStyles = {
     '&.MuiLink-root': {
       '&:hover': {
@@ -18,8 +18,7 @@ const ProjectCard = ({ itemGrid = { xs: 12, sm: 6, md: 4 }, href, imageSrc, altT
   };
 
   return (
-    <Grid item {...itemGrid}>
-      <Link href={href} underline="none" color="action" sx={useStyles["&.MuiLink-root"]}>
+    
         <Stack direction="column"
           justifyContent="space-between"
           alignItems="stretch"
@@ -48,8 +47,6 @@ const ProjectCard = ({ itemGrid = { xs: 12, sm: 6, md: 4 }, href, imageSrc, altT
             {footerSubjects}
           </Stack>
         </Stack>
-      </Link>
-    </Grid>
   );
 };
 
